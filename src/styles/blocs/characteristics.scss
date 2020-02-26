@@ -1,0 +1,12 @@
+.characteristics {
+  background: var(--gradient);
+  font-size: 10px;
+  text-align: center;
+  margin: 0 25px;
+  font-style: italic;
+  line-height: 16px;
+
+  @include landscape {
+    margin: 2px 16px 0;
+  }
+}
