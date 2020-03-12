@@ -1,16 +1,13 @@
-.stats {
+.types {
   display: flex;
   justify-content: space-between;
   border-top: 2px solid black;
   margin: 0 5px;
   padding-top: 3px;
-}
-
-.stat {
   text-align: center;
 }
 
-.stat__name {
+.types__label {
   font-weight: bold;
   font-size: 10px;
 }

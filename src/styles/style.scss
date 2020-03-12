@@ -5,10 +5,9 @@
 
 @import 'global/layout.scss';
 
+@import 'blocs/appearance.scss';
 @import 'blocs/attack.scss';
-@import 'blocs/characteristics.scss';
 @import 'blocs/identity.scss';
-@import 'blocs/image.scss';
-@import 'blocs/infos.scss';
+@import 'blocs/pokedex.scss';
 @import 'blocs/pokemon.scss';
-@import 'blocs/stats.scss';
+@import 'blocs/types.scss';
