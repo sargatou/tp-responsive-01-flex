@@ -51,9 +51,9 @@ Cela permet par exemple de ne pas répéter le header et le footer à chaque pag
 Ici, cela va nous permettre de découper notre page en plusieurs fichiers .pug, un pour chaque bloc.
 
 - Afin de pouvoir utiliser Pug :
-  - Dans le dossier de travail, transformer votre projet simple en projet npm avec `npm init`
+  - Dans le dossier de travail, transformer votre projet simple en projet npm avec `npm init -y`
   - Installer [parcel](https://parceljs.org/) avec `npm install parcel --save-dev`
-  - Dans `package.json`, ajouter un script `"serve": "parcel src/index.pug"`
+  - Dans `package.json`, ajouter un script `"serve": "parcel src/index.pug"` (dans l'objet `scripts: {...}` qui se trouve au début du fichier, à côté de `test`)
   - Changer l'extension de votre fichier `index.html` pour `index.pug`.
   - Lancer `npm run serve`. Parcel _build_ votre site et l'ouvre dans le navigateur, sur _localhost_. En cas d'erreur, il faut d'abord adapter votre index.html à la syntaxe imposée par pug.
 - Déplacer chaque bloc BEM dans son propre fichier pug, dans un dossier dédié (nommé par exemple `src/includes`). Il y aura donc autant de fichiers pug que de blocs BEM.
