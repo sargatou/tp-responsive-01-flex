@@ -5,9 +5,9 @@
 }
 
 .appearance__image {
-  border: 5px solid;
+  border: 0.3125rem solid;
   border-image: var(--gradient) 5;
-  margin: 4px 16px;
+  margin: 0.25rem 1rem;
 
   img {
     display: block;
@@ -16,13 +16,13 @@
 
 .appearance__details {
   background: var(--gradient);
-  font-size: 10px;
+  font-size: 0.625rem;
   text-align: center;
-  margin: 0 25px;
+  margin: 0 1.5625rem;
   font-style: italic;
-  line-height: 16px;
+  line-height: 1rem;
 
   @include landscape {
-    margin: 2px 16px 0;
+    margin: 0.125rem 1rem 0;
   }
 }
