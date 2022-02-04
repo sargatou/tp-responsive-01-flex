@@ -19,7 +19,8 @@
   "homepage": "https://github.com/bcalou/responsive-01-flex#readme",
   "dependencies": {},
   "devDependencies": {
-    "parcel": "^1.12.4",
-    "sass": "^1.25.0"
+    "@parcel/transformer-pug": "^2.2.1",
+    "@parcel/transformer-sass": "^2.2.1",
+    "parcel": "^2.2.1"
   }
 }
