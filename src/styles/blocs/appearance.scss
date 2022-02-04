@@ -1,4 +1,6 @@
 .appearance {
+  margin: 0.25rem 1rem;
+
   @include landscape {
     order: -1;
   }
@@ -7,18 +9,13 @@
 .appearance__image {
   border: 0.3125rem solid;
   border-image: var(--gradient) 5;
-  margin: 0.25rem 1rem;
-
-  img {
-    display: block;
-  }
 }
 
 .appearance__details {
   background: var(--gradient);
   font-size: 0.625rem;
   text-align: center;
-  margin: 0 1.5625rem;
+  margin: 0 .5625rem;
   font-style: italic;
   line-height: 1rem;
 
