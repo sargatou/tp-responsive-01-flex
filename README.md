@@ -25,7 +25,7 @@ Le but de l'exercice est de reproduire une célèbre carte à jouer en utilisant
 ### Étape 1 : Les fondations (HTML sauce BEM)
 
 - Rappel BEM : [ici](https://www.alticreation.com/bem-pour-le-css/) (français) ou [là](https://css-tricks.com/bem-101/)
-- Déterminer quels sont les blocs constituant la carte (une demi-douzaine, selon le choix de découpage), et leur donner un nom simple
+- Déterminer quels sont les blocs constituant la carte (environ 6, selon le choix de découpage), et leur donner un nom simple
 - Écrire le HTML correspondant, sans CSS pour le moment
   - Les images sont dans le dossier `src/assets/img`
 
@@ -42,29 +42,19 @@ Attention à vérifier la présence de la balise _meta viewport_ pour un bon dim
 - Solliciter une vérification de ma part, attendre la correction ou continuer si tout se passe bien !
 - `git commit` avant de passer à la suite
 
-### Étape 2 : Découper le HTML avec pug
+### Étape 2 : Styling SASS
 
-Pug est un langage de templating HTML. Un de ses atouts principaux est de permettre l'inclusion de templates HTML dans d'autres.
+SASS et les fichiers .scss vont nous permettre d'écrire notre CSS plus efficacement.
 
-Cela permet par exemple de ne pas répéter le header et le footer à chaque page d'un site.
+- Dans le dossier de travail, transformer votre projet simple en projet npm avec `npm init -y`
+- Installer [parcel](https://parceljs.org/) avec `npm install parcel --save-dev`
+- Dans `package.json`, ajouter un script `"serve": "parcel src/index.html"` (dans l'objet `scripts: {...}` qui se trouve au début du fichier, à côté de `test`)
+- Lancer `npm run serve`. Parcel _build_ votre site et l'ouvre dans le navigateur, sur _localhost_.
 
-Ici, cela va nous permettre de découper notre page en plusieurs fichiers .pug, un pour chaque bloc.
-
-- Afin de pouvoir utiliser Pug :
-  - Dans le dossier de travail, transformer votre projet simple en projet npm avec `npm init -y`
-  - Installer [parcel](https://parceljs.org/) avec `npm install parcel --save-dev`
-  - Dans `package.json`, ajouter un script `"serve": "parcel src/index.pug"` (dans l'objet `scripts: {...}` qui se trouve au début du fichier, à côté de `test`)
-  - Changer l'extension de votre fichier `index.html` pour `index.pug`.
-  - Lancer `npm run serve`. Parcel _build_ votre site et l'ouvre dans le navigateur, sur _localhost_. En cas d'erreur, il faut d'abord adapter votre index.html à la syntaxe imposée par pug.
-- Déplacer chaque bloc BEM dans son propre fichier pug, dans un dossier dédié (nommé par exemple `src/includes`). Il y aura donc autant de fichiers pug que de blocs BEM.
-- En vous inspirant de la [documentation](https://pugjs.org/language/includes.html), modifier votre code pour inclure les différents fichiers créés dans `index.pug`.
-
-_Note : le mot clé `include` de pug fonctionne même si le reste du code reste au format HTML classique. Pas besoin de tout ré-écrire._
-
-### Étape 3 : Styling SCSS
+Quand tout cela fonctionne :
 
 - Ajouter un fichier `styles.scss` à votre projet et l'importer à partir de l'index. Parcel s'occupera de la transformation en CSS.
-- Ajouter un fichier `reset.scss` à votre projet contenant le [reset CSS classique](https://meyerweb.com/eric/tools/css/reset/), sans l'importer dans l'index.
+- Ajouter un fichier `reset.scss` à votre projet contenant le [reset CSS classique](https://meyerweb.com/eric/tools/css/reset/), sans l'importer dans l'index.html.
 - Dans le fichier `styles.scss`, utiliser un import SASS pour importer le fichier `reset.scss`.
 
 Dans vos projets, toujours inclure les deux règles CSS suivantes (rappel sur [box-sizing](https://developer.mozilla.org/fr/docs/Web/CSS/box-sizing)) :
@@ -87,17 +77,18 @@ Propriétés "interdites" (car inutiles) pour cet exercice :
 - `position`
 - `transform`
 
-Votre but est maintenant de reproduire la carte sur un écran de type iPhone5 (320\*568). Il vous appartient de pousser la ressemblance avec l'original au maximum, mais voici un exemple :
+Votre but est maintenant de reproduire la carte sur un écran de type iPhone5 (320\*568). Il vous appartient de pousser la ressemblance avec l'original au maximum, mais voici un exemple de rendu tout à fait correct :
 
 ![](src/assets/models/portrait.png)
 
 - En accord avec la convention BEM :
+  - Créez un fichier .scss par bloc
   - Utilisez quasiment exclusivement des sélecteurs de classe
   - Évitez au maximum les imbrications. SASS sera utile, mais surtout pour la suite.
 - Solliciter une vérification de ma part, attendre la correction ou continuer si tout se passe bien !
 - `git commit` avant de passer à la suite
 
-### Étape 4 : Mode paysage
+### Étape 3 : Mode paysage
 
 On souhaite adapter la carte à un mobile de la même taille en mode paysage (568\*320), autrement dit lorsque la largeur est plus grande que la hauteur.
 Pour ce faire, vous pouvez ajouter une mixin SASS en début de fichier :
@@ -131,7 +122,7 @@ Voici le nouvel objectif à atteindre :
 - Solliciter une vérification de ma part ou attendre la correction
 - `git commit` pour finir
 
-### Étape 5 : Rendu
+### Étape 4 : Rendu
 
 Rendez votre travail en créant une pull request de votre repository de travail vers ce repository.
 Indiquez votre nom dans le titre ou commentaire de la PR.
@@ -140,7 +131,6 @@ Indiquez votre nom dans le titre ou commentaire de la PR.
 
 - En cas de besoin : [Exercices HTML/CSS](https://htmlcss2018.netlify.com/)
 - [Méthode BEM](http://getbem.com/introduction/)
-- [Pug](https://pugjs.org)
 
 ## Flexbox
 
