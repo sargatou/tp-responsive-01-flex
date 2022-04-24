@@ -2,10 +2,9 @@
   "name": "responsive-01-flex",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "serve": "parcel src/index.pug",
-    "build": "parcel build src/index.pug"
+    "serve": "parcel src/index.html",
+    "build": "parcel build src/index.html"
   },
   "repository": {
     "type": "git",
